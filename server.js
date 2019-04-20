@@ -10,7 +10,7 @@ var connection = mysql.createConnection({
   host: process.env.HOST,
   user: process.env.DB_USERNAME,
   password: process.env.DB_PWD,
-  database: heroku_b882735a44c379b
+  database: process.env.DB_IN_USE
 });
 
 connection.connect();
