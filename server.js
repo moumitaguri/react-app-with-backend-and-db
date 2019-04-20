@@ -37,8 +37,8 @@ app.get("/userCount", (req, res) => {
 
 app.post("/join", (req, res) => {
   const email = req.body.email;
-
   const qry = `INSERT INTO users(email) VALUES("${email}")`;
+
   connection.query(qry, (err, result) => {
     if (err) throw err;
     res.redirect("/");
